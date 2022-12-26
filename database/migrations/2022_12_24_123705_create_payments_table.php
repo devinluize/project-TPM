@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->foreign('id')->references('id')->on('groups');
+            $table->enum('Tipe',['Early Bird','Binusian','Non-Binusian']);
+            $table->string('No_Rek');
+            $table->string('Bank');
+            $table->string('Nama');
+            $table->string('Bukti');
+            // $table->boolean('Verifikasi');
             $table->timestamps();
         });
     }

@@ -15,7 +15,17 @@ return new class extends Migration
     {
         Schema::create('leaders', function (Blueprint $table) {
             $table->id();
-            $table->foreign('ID')->references('ID')->on('groups');
+            $table->foreign('id')->references('id')->on('groups');
+            $table->string('Nama');
+            $table->string('Email');
+            $table->string("Whatsapp");
+            $table->string('Line');
+            $table->string('Github');
+            $table->string('Tpt_Lahir');
+            $table->date('Tgl_Lahir');
+            $table->string('Foto');
+            $table->string('CV');
+            $table->string('Kartu');
             $table->timestamps();
         });
     }

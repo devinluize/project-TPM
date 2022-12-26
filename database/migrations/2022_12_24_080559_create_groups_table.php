@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('Nama');
             $table->string('Password');
             $table->boolean('Binusian');
+            $table->string('Foto');
             $table->timestamps();
         });
     }
