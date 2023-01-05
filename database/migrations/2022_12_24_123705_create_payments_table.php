@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('Bank');
             $table->string('Nama');
             $table->string('Bukti');
-            // $table->boolean('Verifikasi');
+            $table->boolean('Verifikasi');
             $table->timestamps();
         });
     }

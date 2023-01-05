@@ -13,6 +13,5 @@ class payment extends Model
         'Bank',
         'Nama',
         'Bukti',
-         // 'Verifikasi',
     ];
 }

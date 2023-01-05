@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('Nama');
             $table->string('Password');
-            $table->boolean('Binusian');
+            $table->enum('Kategori',['Binusian','Non-Binusian']);
             $table->string('Foto');
             $table->timestamps();
         });

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\group;
 use Illuminate\Http\Request;
 
-class hackthon_ct extends Controller
+class GroupCt extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class hackthon_ct extends Controller
      */
     public function index()
     {
-        //
+        $teams = group::all();
     }
 
     /**
@@ -23,7 +24,7 @@ class hackthon_ct extends Controller
      */
     public function create()
     {
-        //
+        return view('regis-lead');
     }
 
     /**
@@ -34,7 +35,15 @@ class hackthon_ct extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $extension = $request->file('Foto')->getClientOriginalExtension();
+        $filename = $request->Nama.'.'.$extension;
+        $request->file('Foto')->storeAs('/public/Team/',$filename);
+        group::create([
+            'Nama' => $request -> Nama,
+            'Password' => $request -> Pass,
+            'Binusian' => $request -> Binusian,
+            'Foto' => $filename
+        ])
     }
 
     /**
