@@ -16,4 +16,10 @@ class group extends Model
         'Foto',
     ];
 
+    public function leader(){
+        return $this->hasOne(leader::class);
+    }
+    public function member(){
+        return $this->hasMany(member::class);
+    }
 }

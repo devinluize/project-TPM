@@ -20,4 +20,8 @@ class leader extends Model
         'CV',
         'Kartu',
     ];
+
+    public function group(){
+        return $this->belongsTo(group::class);
+    }
 }

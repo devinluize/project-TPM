@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id')->references('id')->on('groups');
+            $table->unsignedBigInteger('id_Tim');
+            $table->foreign('id_Tim')->references('id')->on('groups');
             $table->string('Nama');
             $table->string('Email');
             $table->string("Whatsapp");

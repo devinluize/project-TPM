@@ -9,6 +9,7 @@ class member extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id_Tim',
         'Nama',
         'Email',
         "Whatsapp",
@@ -20,4 +21,8 @@ class member extends Model
         'CV',
         'Kartu',
     ];
+    
+    public function group(){
+        return $this->belongsTo(group::class);
+    }
 }
