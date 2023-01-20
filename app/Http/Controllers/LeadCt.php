@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\group;
 use Illuminate\Http\Request;
 
 class LeadCt extends Controller
@@ -57,7 +58,7 @@ class LeadCt extends Controller
             'Foto' => $filename_foto,
             'CV' => $filename_cv,
             'Kartu' => $filename_kartu
-        ])
+        ]);
     }
 
     /**

@@ -43,7 +43,7 @@ class GroupCt extends Controller
             'Password' => $request -> Pass,
             'Binusian' => $request -> Binusian,
             'Foto' => $filename
-        ])
+        ]);
     }
 
     /**
