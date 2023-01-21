@@ -31,15 +31,15 @@
             </div>
             <div class="githubgitlab-parent">
                 <div class="githubgitlab">Github/Gitlab</div>
-                <b class="githubcompradikta">github.com/pradikta</b>
+                <b class="githubcompradikta">{{$lead->Github}}</b>
             </div>
             <div class="line-id-parent">
                 <div class="githubgitlab">LINE ID</div>
-                <b class="githubcompradikta">diktawicaksono</b>
+                <b class="githubcompradikta">{{$lead->Line}}</b>
             </div>
             <div class="whatsapp-number-parent">
                 <div class="whatsapp-number">Whatsapp Number</div>
-                <b class="xxxx-xxxx">0821-XXXX-XXXX</b>
+                <b class="xxxx-xxxx">{{$lead->Whatsapp}}</b>
             </div>
             <div class="rectangle-parent10">
                 <div class="group-child11"></div>
@@ -53,22 +53,22 @@
             <div class="frame-inner"></div>
             <div class="nama-lengkap-parent">
                 <div class="nama-lengkap">Nama Lengkap</div>
-                <b class="pradikta-wicaksono">Pradikta Wicaksono</b>
+                <b class="pradikta-wicaksono">{{$lead->Nama}}</b>
             </div>
             <div class="email-parent">
                 <div class="nama-lengkap">Email</div>
-                <b class="wicaksonodiktagmailcom">wicaksono.dikta@gmail.com</b>
+                <b class="wicaksonodiktagmailcom">{{$lead->Email}}</b>
             </div>
             <div class="tempat-tanggal-lahir-parent">
                 <div class="nama-lengkap">Tempat, Tanggal Lahir</div>
-                <b class="wicaksonodiktagmailcom">Jakarta, 10 Januari 1986</b>
+                <b class="wicaksonodiktagmailcom">{{$lead->Tpt_Lahir}} {{$lead->Tgl_Lahir}}</b>
             </div>
             <b class="informasi-leader">INFORMASI LEADER</b>
         </div>
         <div class="rectangle-parent12">
             <div class="frame-child1"></div>
             <b class="anonymous">Anonymous</b>
-            <div class="nama-group">Nama Group</div>
+            <div class="nama-group">{{$team->Nama}}</div>
             <b class="ubah-foto-profil">Ubah Foto Profil</b>
             <div class="rectangle-parent13">
                 <button class="rectangle-button"></button>
@@ -76,24 +76,26 @@
             </div>
             <img class="ellipse-icon" alt="" src="{{ asset('user/assets/img/default-avatar.png') }}" />
         </div>
-        <div class="vector-parent">
-            <img class="rectangle-icon" alt="" src="{{ asset('user/assets/img/rectangle.png') }}" /><b
-                class="informasi-member">INFORMASI MEMBER</b>
-            <div class="john-doe-wrapper">
-                <div class="john-doe">John Doe</div>
+        <b class="informasi-member">INFORMASI MEMBER</b>
+        @foreach ($members as $member)
+            <div class="vector-parent">
+                <img class="rectangle-icon" alt="" src="{{ asset('user/assets/img/rectangle.png') }}" />
+                <div class="john-doe-wrapper">
+                    <div class="john-doe">John Doe</div>
+                </div>
+                <div class="john-doe-container">
+                    <div class="john-doe">John Doe</div>
+                </div>
+                <div class="john-doe-frame">
+                    <div class="john-doe">John Doe</div>
+                </div>
+                <div class="john-doe-wrapper1">
+                    <div class="john-doe">John Doe</div>
+                </div>
             </div>
-            <div class="john-doe-container">
-                <div class="john-doe">John Doe</div>
-            </div>
-            <div class="john-doe-frame">
-                <div class="john-doe">John Doe</div>
-            </div>
-            <div class="john-doe-wrapper1">
-                <div class="john-doe">John Doe</div>
-            </div>
-            <div class="primary-button">
-                <button class="sign-up">ADD MEMBER</button>
-            </div>
+        @endforeach
+        <div class="primary-button">
+            <button class="sign-up" href="{{route('user.register',$team->id)}}">ADD MEMBER</button>
         </div>
         <div class="register-nav-logo2">
             <div class="register-nav-logo-inner"></div>
@@ -101,5 +103,4 @@
                 <img class="dummylogotpm-1-icon2" alt="" src="{{ asset('assets/img/icon.png') }}" />
             </div>
         </div>
-    </div>
 @endsection

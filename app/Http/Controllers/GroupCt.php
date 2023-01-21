@@ -15,6 +15,7 @@ class GroupCt extends Controller
     public function index()
     {
         $teams = group::all();
+        return view('admin.dashboard',compact('teams'));
     }
 
     /**
@@ -35,15 +36,12 @@ class GroupCt extends Controller
      */
     public function store(Request $request)
     {
-        $extension = $request->file('Foto')->getClientOriginalExtension();
-        $filename = $request->Nama.'.'.$extension;
-        $request->file('Foto')->storeAs('/public/Team/',$filename);
         group::create([
-            'Nama' => $request -> Nama,
-            'Password' => $request -> Pass,
-            'Binusian' => $request -> Binusian,
-            'Foto' => $filename
-        ])
+            'Nama' => $request->nama_grup,
+            'Password' => $request->pass,
+            'Kategori' => $request->kategori,
+        ]);
+        return redirect('/user/dashboard');
     }
 
     /**
@@ -54,7 +52,8 @@ class GroupCt extends Controller
      */
     public function show($id)
     {
-        //
+        $team = group::findOrFail($id);
+        return view('user.dashboard',compact('team'));
     }
 
     /**
@@ -65,7 +64,9 @@ class GroupCt extends Controller
      */
     public function edit($id)
     {
-        //
+        $team = group::findOrFail($id);
+
+        return view('admin.editGrup',compact('team'));
     }
 
     /**
@@ -77,7 +78,12 @@ class GroupCt extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        group::findOrFail($id)->update([
+            'Nama' => $request -> nama_grup,
+            'Password' => $request -> pass,
+            'Kategori' => $request -> kategori,
+        ]);
+        return redirect('/admin/dashboard');
     }
 
     /**
@@ -88,6 +94,7 @@ class GroupCt extends Controller
      */
     public function destroy($id)
     {
-        //
+        group::destroy($id);
+        return redirect('/admin/dashboard');
     }
 }

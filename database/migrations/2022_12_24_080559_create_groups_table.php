@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('Nama');
             $table->string('Password');
             $table->enum('Kategori',['Binusian','Non-Binusian']);
-            $table->string('Foto');
             $table->timestamps();
         });
     }

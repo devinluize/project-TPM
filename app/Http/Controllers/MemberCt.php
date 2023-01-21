@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\leader;
 use Illuminate\Http\Request;
 
 class MemberCt extends Controller
@@ -13,17 +14,19 @@ class MemberCt extends Controller
      */
     public function index()
     {
-        //
+        $members = member::all();
+        return view('admin.dashboard',compact('members'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @param  int  $id_Tim
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id_Tim)
     {
-        //
+        $group = group::findOrFail($id_Tim);
+        return view('registMember',compact('group'));
     }
 
     /**
@@ -32,12 +35,8 @@ class MemberCt extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id_Tim)
     {
-        $extension_foto = $request->file('Foto')->getClientOriginalExtension();
-        $filename_foto = $request->Nama.'_Foto.'.$extension_foto;
-        $request->file('Foto')->storeAs('/public/Member/Foto/',$filename_foto);
-
         $extension_cv = $request->file('cv')->getClientOriginalExtension();
         $filename_cv = $request->Nama.'_CV.'.$extension_cv;
         $request->file('cv')->storeAs('/public/Member/CV/',$filename_cv);
@@ -47,17 +46,19 @@ class MemberCt extends Controller
         $request->file('kartu')->storeAs('/public/Member/Kartu/',$filename_kartu);
 
         group::create([
-            'Nama'=> $request -> Nama,
-            'Email'=> $request -> Email,
-            "Whatsapp"=> $request -> WA,
-            'Line'=> $request -> Line,
-            'Github'=> $request -> Github,
-            'Tpt_Lahir'=> $request -> Tempat,
-            'Tgl_Lahir'=> $request -> Tanggal,
-            'Foto' => $filename_foto,
+            'id_Tim' => $id_Tim,
+            'Nama' => $request->nama,
+            'Email' => $request->email,
+            "Whatsapp" => $request->WA,
+            'Line' => $request->line,
+            'Github' => $request->github,
+            'Tpt_Lahir' => $request->tempat,
+            'Tgl_Lahir' => $request->tanggal,
             'CV' => $filename_cv,
             'Kartu' => $filename_kartu
-        ])
+        ]);
+
+        return redirect('/user/dashboard');
     }
 
     /**
@@ -68,7 +69,8 @@ class MemberCt extends Controller
      */
     public function show($id)
     {
-        //
+        $member = member::findOrFail($id);
+        return view('user.dashboard',compact('member'));
     }
 
     /**
@@ -79,7 +81,8 @@ class MemberCt extends Controller
      */
     public function edit($id)
     {
-        //
+        $member = member::findOrFail($id);
+        return view('admin.editMember',compact('member'));
     }
 
     /**
@@ -91,7 +94,26 @@ class MemberCt extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $extension_cv = $request->file('cv')->getClientOriginalExtension();
+        $filename_cv = $request->Nama.'_CV.'.$extension_cv;
+        $request->file('cv')->storeAs('/public/Member/CV/',$filename_cv);
+
+        $extension_kartu = $request->file('kartu')->getClientOriginalExtension();
+        $filename_kartu = $request->Nama.'_Kartu.'.$extension_kartu;
+        $request->file('kartu')->storeAs('/public/Member/Kartu/',$filename_kartu);
+
+        group::findOrFail($id)->update([
+            'Nama' => $request->nama,
+            'Email' => $request->email,
+            "Whatsapp" => $request->WA,
+            'Line' => $request->line,
+            'Github' => $request->github,
+            'Tpt_Lahir' => $request->tempat,
+            'Tgl_Lahir' => $request->tanggal,
+            'CV' => $filename_cv,
+            'Kartu' => $filename_kartu
+        ]);
+        return redirect('/admin/dashboard');
     }
 
     /**
@@ -102,6 +124,7 @@ class MemberCt extends Controller
      */
     public function destroy($id)
     {
-        //
+        member::destroy($id);
+        return redirect('/admin/dashboard');
     }
 }

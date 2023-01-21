@@ -17,11 +17,10 @@ class member extends Model
         'Github',
         'Tpt_Lahir',
         'Tgl_Lahir',
-        'Foto',
         'CV',
         'Kartu',
     ];
-    
+
     public function group(){
         return $this->belongsTo(group::class);
     }

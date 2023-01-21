@@ -16,7 +16,6 @@ class leader extends Model
         'Github',
         'Tpt_Lahir',
         'Tgl_Lahir',
-        'Foto',
         'CV',
         'Kartu',
     ];

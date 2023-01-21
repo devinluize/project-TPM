@@ -7,46 +7,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
 @endsection
 @section('content')
-    <form action="/store-team" method="post">
-        @csrf
-        <div class="registrasi1">
-            <div class="registrasi-child"></div>
-            <div class="rectangle-parent6">
-                <div class="group-child15"></div>
-                <b class="informasi-group">INFORMASI GROUP</b>
-                <div class="rectangle-parent7">
-                    <b class="group-name">Group Name</b>
-                    <input class="group-child16" type="text" name="nama_grup" placeholder="Masukkan nama group Anda"
-                        style="font-size: 22px;" />
-                </div>
-                <div class="sudah-punya-akun-container">
-                    <span>Sudah punya akun? </span><b class="login-disini">
-                        <a href="{{ route('login') }}" style="text-decoration: none; color: #3D6BB7;">
-                            Login disini
-                        </a>
-                    </b>
-                </div>
-                <div class="rectangle-parent8">
-                    <b class="group-name">Password</b>
-                    <input class="group-child17" type="password" name="pass" placeholder="Masukkan password Anda"
-                        style="font-size: 22px;" />
-                </div>
-                <div class="rectangle-parent9">
-                    <b class="group-name">Konfirmasi Password</b>
-                    <input class="group-child18" type="password" name="confpass" placeholder="Masukkan konfirmasi password Anda"
-                        style="font-size: 22px;" />
-                </div>
-                <div class="category-parent">
-                    <b class="group-name">Category</b>
-                    <b class="binusian">Binusian</b>
-                    <b class="non-binusian">Non - Binusian</b>
-                    <input class="group-child19" type="radio" name="category" />
-                    <input class="group-child20" type="radio" name="category" />
-                </div>
-            </div>
-        </div>
-    </form>
-    <form action="/store-leader" method="post">
+    <form action="/store-member/{{$team->id}}" method="post">
         @csrf
         <div class="registrasi2">
             <img class="registrasi-item" alt="" />
@@ -64,7 +25,7 @@
                         src="{{ asset('assets/img/nofile.png') }}" />
                     <div class="no-selected-file">No selected File -</div>
                 </div>
-                <b class="informasi-leader">INFORMASI LEADER</b>
+                <b class="informasi-leader">INFORMASI MEMBER</b>
                 <div class="rectangle-parent13">
                     <b class="nama-lengkap">Nama Lengkap</b>
                     <input class="component-child" type="text" placeholder="Masukkan nama lengkap Anda"
@@ -98,7 +59,7 @@
                 </div>
                 <div class="rectangle-parent18">
                     <div class="group-child28"></div>
-                    <b class="upload-cv">Upload Flazz Card</b><img class="riupload-cloud-fill-icon1" alt=""
+                    <b class="upload-cv">Upload ID/Flazz Card</b><img class="riupload-cloud-fill-icon1" alt=""
                         src="{{ asset('assets/img/upload.png') }}" />
                     <input class="browse-files-to1" type="file" name="kartu"/>
                     <div class="only-pdf-jpg-container">
@@ -106,7 +67,7 @@
                         <p class="with-max-size">with max size of 2.5 MB</p>
                     </div>
                 </div>
-                <div class="rectangle-parent19">
+                {{-- <div class="rectangle-parent19">
                     <div class="group-child29"></div>
                     <b class="upload-cv">Upload ID Card</b><img class="riupload-cloud-fill-icon2" alt=""
                         src="{{ asset('assets/img/upload.png') }}" />
@@ -115,7 +76,7 @@
                         <p class="only-pdf-jpg1">Only PDF, JPG, JPEG and PNG</p>
                         <p class="with-max-size">with max size of 2.5 MB</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="rectangle-parent20">
                     <b class="group-name">LINE ID</b>
                     <input class="group-child24" type="text" placeholder="Masukkan LINE ID Anda" name="line"
@@ -141,5 +102,4 @@
             </div>
         </div>
     </form>
-
 @endsection

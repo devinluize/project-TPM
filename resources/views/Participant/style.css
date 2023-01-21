@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#nav .container{
+    padding-block: 1.5rem;
+    display: flex;
+    justify-content: space-between;  
+    background: white;
+    border: 2px solid white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+}
+#nav .container .menu{
+    display: flex;
+    align-items: center;
+}
+#nav .container .logo{
+    margin-left: 4rem;
+}
+#nav .container .menu .link>a{
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1rem;
+    margin-right: 4rem;
+}
+#nav .container .menu .link .participant{
+    font-weight: 700;
+}
+#nav .container .menu .link .log{
+    font-weight: 700;
+    color: red;
+}
+#team .container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    background-image: url(./ellipsee.png);
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+#team .block{
+    width: 1100px;
+    height: 800px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: white;
+}
+#team .container .block .fitur{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    visibility: hidde;
+}
+#team .container .block .fitur>img{
+    visibility: visible;
+}
+
+#team .container .block .nama{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 4rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#team .container .block .nama .nama1{
+        margin-left: 3rem;
+    }
+
+#team .container .block .nama .del{
+    margin-left: 30rem;
+}
+
+#team .container .block .block1{
+    width: 1000px;
+    border: 2px solid white;
+    background:  #E9E9E9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    gap: 3rem;
+}
+#team .container .block .block1 .teams{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+#team .container .block .block1 .trash{
+    margin-left: 28rem;
+}
+#team .container .block .block2{
+    width: 1000px;
+    border: 2px solid white;
+    background:  #E9E9E9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    gap: 3rem;
+}
+#team .container .block .block2 .teams2{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+#team .container .block .block2 .trash2{
+    margin-left: 30rem;
+}

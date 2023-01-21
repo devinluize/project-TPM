@@ -12,8 +12,7 @@ class group extends Model
     protected $fillable = [
         'Nama',
         'Password',
-        'Binusian',
-        'Foto',
+        'Kategori',
     ];
 
     public function leader(){

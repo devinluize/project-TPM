@@ -18,18 +18,27 @@
     height: 20px;
     text-decoration: none;
     color: white;
+    margin-left: 1rem;
+}
+#navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 #navbar .container{
     padding-block: 1.5rem;
     display: flex;
     justify-content: space-between;
+    backdrop-filter: brightness(50%);
+    background: linear-gradient(158.55deg, #165FAB 0%, rgba(153, 184, 235, 0) 132.27%);;
 }
 #navbar .container .nav-menu{
     display: flex;
     align-items: center;
 }
 #navbar .container .nav-menu .nav-link>a{
-    color: black;
+    color: white;
     font-weight: 400;
     text-decoration: none;
     padding: 1rem;
