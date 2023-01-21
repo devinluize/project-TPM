@@ -22,7 +22,7 @@ use Symfony\Component\HttpKernel\HttpCache\Store;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/store-team',[GroupCt::class,'store'])
-Route::get('/store-lead',[LeadCt::class,'store'])
-Route::get('/store-member',[MemberCt::class,'store'])
-Route::get('/store-payment',[PaymentCt::class,'store'])
+// Route::get('/store-team',[GroupCt::class,'store'])
+// Route::get('/store-lead',[LeadCt::class,'store'])
+// Route::get('/store-member',[MemberCt::class,'store'])
+// Route::get('/store-payment',[PaymentCt::class,'store'])

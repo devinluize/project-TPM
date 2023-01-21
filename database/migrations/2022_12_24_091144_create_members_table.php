@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('Foto');
             $table->string('CV');
             $table->string('Kartu');
+            $table->boolean('isAdmin')->default(0);
             $table->timestamps();
         });
     }
