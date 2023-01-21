@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  .group-child1,
+  .timeline-child {
+    position: absolute;
+    top: 0;
+    left: 312px;
+    background-color: var(--color-gray-100);
+    width: 1125px;
+    height: 1024px;
+  }
+  .group-child1 {
+    left: 0;
+    border-radius: var(--br-md);
+    background-color: var(--color-gray-300);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 167px;
+    height: 163px;
+  }
+  .open {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .registration {
+    margin: 0;
+  }
+  .open-registration,
+  .sabtu-21-mei-container {
+    position: absolute;
+    top: 35px;
+    left: 28px;
+    display: inline-block;
+    width: 111px;
+    height: 40px;
+  }
+  .sabtu-21-mei-container {
+    top: 87px;
+    font-weight: 600;
+    width: 100px;
+    height: 41px;
+  }
+  .group-child2,
+  .group-div {
+    position: absolute;
+    height: 163px;
+  }
+  .group-div {
+    top: 611px;
+    left: 483px;
+    width: 167px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
+  }
+  .group-child2 {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-md);
+    background-color: var(--color-gray-300);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 166px;
+  }
+  .senin-23-mei-container,
+  .technical-meeting {
+    position: absolute;
+    top: 35px;
+    left: 28px;
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+  }
+  .senin-23-mei-container {
+    top: 87px;
+    font-weight: 600;
+    width: 103px;
+    height: 41px;
+  }
+  .rectangle-parent1 {
+    position: absolute;
+    top: 611px;
+    left: 910px;
+    width: 166px;
+    height: 163px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
+  }
+  .group-child3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-md);
+    background-color: var(--color-white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 167px;
+    height: 163px;
+  }
+  .minggu-22-mei-container {
+    position: absolute;
+    top: 87px;
+    left: 28px;
+    font-weight: 600;
+    display: inline-block;
+    width: 104px;
+    height: 41px;
+  }
+  .rectangle-parent2 {
+    position: absolute;
+    top: 250px;
+    left: 664px;
+    width: 167px;
+    height: 163px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-300);
+  }
+  .competition-day {
+    position: absolute;
+    top: 35px;
+    left: 28px;
+    display: inline-block;
+    width: 113px;
+    height: 40px;
+  }
+  .rectangle-parent3 {
+    position: absolute;
+    top: 250px;
+    left: 1104px;
+    width: 167px;
+    height: 163px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-300);
+  }
+  .timeline-item {
+    position: absolute;
+    top: 450.68px;
+    left: 451px;
+    width: 843px;
+    height: 108.34px;
+  }
+  .hackthon {
+    position: absolute;
+    top: 37px;
+    left: 39px;
+    font-size: var(--font-size-3xl);
+    color: var(--color-white);
+  }
+  .dashboard {
+    position: absolute;
+    top: 183px;
+    left: 56px;
+  }
+  .logout,
+  .payment1,
+  .timeline1 {
+    position: absolute;
+    top: 258px;
+    left: 56px;
+  }
+  .logout,
+  .timeline1 {
+    top: 333px;
+  }
+  .logout {
+    top: 884px;
+    left: 62px;
+    color: var(--color-brown);
+  }
+  .timeline2 {
+    position: absolute;
+    top: 40px;
+    left: 341px;
+  }
+  .register-nav-logo-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 var(--br-xl) 0;
+    background-color: var(--color-gray-300);
+    width: 312px;
+    height: 129px;
+  }
+  .dummylogotpm-1-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .dummylogo-png {
+    position: absolute;
+    top: 29px;
+    left: 103px;
+    width: 71px;
+    height: 71px;
+  }
+  .register-nav-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 312px;
+    height: 129px;
+  }
+  .timeline {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1024px;
+    overflow: hidden;
+    text-align: center;
+    font-size: var(--font-size-2xl);
+    color: var(--color-gray-400);
+    font-family: var(--font-montserrat);
+  }
