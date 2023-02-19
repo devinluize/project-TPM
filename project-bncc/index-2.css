@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FAFAFA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-1{
+    box-sizing: border-box;
+    width: 350px;
+    height: 680px;
+    background-color: #FFF;
+    margin: 20px auto;
+    border: solid;
+    border-width: 1px;
+    border-color: #D9D9D9;
+}
+
+#ig{
+    box-sizing: border-box;
+    width: 270px;
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+#p-1{
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+    font-size: 17px;
+    color: grey;
+}
+
+#p-2{
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    bottom: 35px;
+    font-size: 17px;
+    color: grey;
+}
+
+#fb{
+    width: 18px;
+    position: relative;
+    top: 3px;
+}
+
+#login{
+    width: 270px;
+    height: 40px;
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFF;
+    position: relative;
+    bottom: 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4DB0FE;
+}
+
+#p-0{
+    color: #FFF;
+    text-decoration: none;
+}
+#login:hover{
+    background-color: #0869FB;
+}
+
+#v-1{
+    box-sizing: border-box;
+    padding-left: 39px;
+    width: 310px;
+}
+
+#p-3{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 13px;
+    color: #636262;
+    position: relative;
+    bottom: 13px;
+}
+
+#email, #name, #username, #password{
+    box-sizing: border-box;
+    width: 270px;
+    height: 40px;
+    margin-left: 40px;
+    margin-bottom: 8px;
+    border: solid;
+    border-width: 1px;
+    border-color: #D9D9D9;
+    font-size: 13px;
+    padding-left: 10px;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+}
+
+
+#p-4, #p-5, #p-6, #p-7{
+    text-align: center;
+    font-size: 13px;
+    color: #636262;
+}
+
+#p-4{
+    margin-top: 10px;
+}
+
+#p-5{
+    position: relative;
+    bottom: 15px;
+}
+
+#p-6{
+    position: relative;
+    bottom: 13px;
+}
+
+#p-7{
+    position: relative;
+    bottom: 24px;
+}
+
+#a-1, #a-2, #a-3, #a-4, #a-5{
+    text-decoration: none;
+    color: #072f6b;
+}
+
+#signup{
+    width: 270px;
+    height: 40px;
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFF;
+    position: relative;
+    bottom: 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4DB0FE;
+}
+
+.container-2{
+    box-sizing: border-box;
+    width: 350px;
+    height: 60px;
+    background-color: #FFF;
+    margin: 20px auto;
+    border: solid;
+    border-width: 1px;
+    border-color: #D9D9D9;
+    font-size: 15px;
+}
+
+#p-8{
+    text-align: center;
+    line-height: 60px;
+}
+
+
+#a-6{
+    text-decoration: none;
+}
+
+.container-3{
+    box-sizing: border-box;
+    box-sizing: border-box;
+    width: 350px;
+    height: 60px;
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+#p-9{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 15px;
+}
+
+#g-1{
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+#g-2{
+    padding-left: 10px;
+    width: 140px;
+    
+}
+
+.container-4{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.link{
+   box-sizing: border-box;
+   font-size: 13px;
+   text-decoration: none;
+   padding-left: 10px;
+   padding-right: 10px;
+   color: #636262;
+   position: relative;
+   top: 20px;
+}
+
+#u-1:hover{
+    text-decoration: underline;
+}
+
+#u-2:hover{
+    text-decoration: underline;
+}
+
+#u-3:hover{
+    text-decoration: underline;
+}
+
+#u-4:hover{
+    text-decoration: underline;
+}
+
+#u-5:hover{
+    text-decoration: underline;
+}
+
+#u-6:hover{
+    text-decoration: underline;
+}
+
+
+#icon{
+    box-sizing: border-box;
+    position: relative;
+    top: 37px;
+    right: 79px;
+    width: 13px;
+}
+
+#p6{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 13px;
+    color: #636262;
+    padding-left: 20px;
+}
+
+
+
